@@ -1,6 +1,5 @@
 <?php
 /**
- * SAVE DATA IN FILE
  * Log some data in .txt file.
  *
  * File modes:

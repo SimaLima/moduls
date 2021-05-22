@@ -1,6 +1,5 @@
 <?php
 /**
- * JSON TO ARRAY
  * Parse json value to array.
  */
 $json ='{"id":1,"name":"foo","interest":["wordpress","php"]} ';

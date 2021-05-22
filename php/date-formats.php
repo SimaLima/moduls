@@ -1,6 +1,7 @@
 <?php
 /**
- * DATE FORMATS
+ * Date formats.
+ *
  * Main date formating options.
  */
 

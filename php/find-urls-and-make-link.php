@@ -1,6 +1,7 @@
 <?php
 /**
- * MAKE URLS IN TEXT AND DISPLAY AS ANCHOR
+ * Make urls in text and display as anchor.
+ *
  * Use regex to find urls in text, then display them in anchor tag.
  */
 

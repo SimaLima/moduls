@@ -1,6 +1,7 @@
 <?php
 /**
- * CHECK IF STRING STARTS WITH DEFINED CHARACTERS
+ * Check if string starts with defined characters.
+ *
  * Receives string and characters which are used to check if string
  * starts with defined characters.
  *

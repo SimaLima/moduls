@@ -1,7 +1,6 @@
 <?php
 /**
- * CREATE SLUG FROM TITLE
- * Use title to create slug.
+ * Create slug from title.
  *
  * @param string $title = title value
  * @return string = title transformed to slug

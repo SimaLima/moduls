@@ -1,6 +1,7 @@
 <?php
 /**
- * MAKE ARRAY HUMAN READABLE
+ * Make array human readable.
+ *
  * Get array values and display them in readable way.
  *
  * @param array $elements = array values

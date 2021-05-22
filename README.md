@@ -1,2 +1,2 @@
-# moduls
-Simple custom snippets and basic things.
+# Snippets
+Snippets and code modules that help me write code faster.

@@ -1,6 +1,5 @@
 <?php
 /**
- * UNIQUE VALUE
  * Create unique value from all alphanumeric characters.
  *
  * @param integer $lenth = length or unique value

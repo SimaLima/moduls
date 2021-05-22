@@ -1,6 +1,7 @@
 <?php
 /**
- * TRUNCATE TEXT IN MIDDLE
+ * Truncate text in middle.
+ *
  * Find text middle and replace it with separator.
  *
  * @param string $text = text in which to replace the middle

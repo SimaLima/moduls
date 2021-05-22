@@ -1,6 +1,7 @@
 <?php
 /**
- * GET PAGE URL
+ * Get page url.
+ *
  * Use global: $_SERVER to find current page url.
  */
 function getUrl() {

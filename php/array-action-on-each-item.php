@@ -1,6 +1,7 @@
 <?php
 /**
- * CUSTOMIZE EVERY ITEM IN ARRAY
+ * Customize every item in array.
+ *
  * Use array_map method to change every item in array.
  */
 $original = array('<p>Paragraph</p>', '<strong>Bold</strong>');

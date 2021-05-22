@@ -1,20 +1,14 @@
 var SelectMediaLibrary = (function() {
+    /**
+     * Open media library and get selected items data.
+     */
 
-    // set all variables to be used in scope
-    var dashboard = $('#dashboard');
     var frame;
-    var img_container;
-    var save_button;
+    var dashboard = $('#panel-backend');
 
-
-    // OPEN MEDIA MODAL AND ADD NEW IMAGE
-    dashboard.on( 'click', 'button', function( event ){
+    // OPEN MEDIA MODAL
+    dashboard.on('click', '.open-media-library', function(event) {
         event.preventDefault();
-
-        var form = $(this).closest('#form');
-        img_container = form.find('#new-images-holder');
-        save_button = form.find('#save-button');
-
 
         // if the media frame already exists, reopen it
         if ( frame ) {
@@ -22,7 +16,7 @@ var SelectMediaLibrary = (function() {
             return;
         }
 
-        // Create a new media frame
+        // create new media frame
         frame = wp.media({
             title: 'Select image',
             button: {
@@ -31,31 +25,15 @@ var SelectMediaLibrary = (function() {
             multiple: true
         });
 
-
         // when an image is selected in the media frame...
-        frame.on( 'select', function() {
+        frame.on('select', function() {
 
-            // get media attachment details from the frame
-            var attachment = frame.state().get('selection').first().toJSON();
+            // get media attachments details from the frame
+            var attachments = frame.state().get('selection').toJSON();
 
-            // new item - with img, hidden input, cancel button
-            var new_item = $('<figure/>')
-                    .addClass('new-item')
-                    .append(
-                        $('<div class="new-gallery-image"><img src="' + attachment.url + '" alt=""></div>'),
-                        $('<input type="hidden" name="image_id" value="' + attachment.id + '" >').trigger('change'),
-                        $('<button class="button-link attachment-close media-modal-icon"></button>')
-                    );
-
-
-            // send content to container
-            img_container.prepend(new_item);
-
-            // show "save button"
-            if ( save_button.hasClass('hidden') ) {
-                save_button.removeClass('hidden');
+            for (var i = 0; i < attachments.length; i++) {
+                console.log(attachments[i]);
             }
-
         });
 
         // open the modal on click

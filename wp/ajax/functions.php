@@ -1,19 +1,15 @@
 <?php
-
-$static_nonce = 5987454543;
-
+/**
+ * Localize script.
+ */
 function localize_scripts() {
-    global $static_nonce;
-
     wp_localize_script( 'wp-ajax', 'LOCALIZE', array(
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+
         'security' => wp_create_nonce( 'wp-ajax-nonce' ), // dynamic nonce
         // one or another (||)
-        'security_stat' => $static_nonce // static nonce
+        'security_stat' => 'c214gd5315' // static nonce
         )
     );
-
 }
-
-
-
-?>
+add_action( 'wp_enqueue_scripts', 'localize_scripts' );

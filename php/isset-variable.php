@@ -1,7 +1,6 @@
 <?php
 /**
- * CHECK IF VARIABLE IS SET & NOT EMPTY
- * Check variable definition.
+ * Check if variable is set & not empty.
  */
 if (isset($var) && !empty(trim($var))) {
     // code
@@ -9,8 +8,7 @@ if (isset($var) && !empty(trim($var))) {
 
 
 /**
- * CHECK IF VARIABLE IS NUMBER
- * Check variable definition as number.
+ * Check if variable is number.
  */
 if (isset($var) && !empty(trim($var))) {
     if (is_numeric($var) && $var != 0) {
@@ -20,8 +18,7 @@ if (isset($var) && !empty(trim($var))) {
 
 
 /**
- * CHECK IF VARIABLE IS ARRAY
- * Check variable definition as array.
+ * Check if variable is array.
  */
 if (isset($var) && !empty(trim($var))) {
     if (is_array($var)) {

@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * Check if connection is using HTTP or HTTPS
  */
 if (
     !empty($_SERVER['HTTPS']) &&

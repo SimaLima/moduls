@@ -1,6 +1,7 @@
 <?php
 /**
- * STRIP CODE FROM TEXT
+ * Strip code from text.
+ *
  * Use regex to remove all from from text.
  *
  * @param string $text = text to filter

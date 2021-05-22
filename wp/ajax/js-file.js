@@ -1,72 +1,46 @@
 var JSAjax = (function() {
-    // On click call ajax function, send request and handle request
-
-    var element = $('#static_element');
-    var message_box = $('#message-box');
+    /**
+     * Send and receive AJAX request.
+     */
 
 
     // TRIGGER AJAX CALL
-    element.on('click', 'button', function(event) {
+    $('#element').on('click', '.submit', function(event) {
         event.preventDefault();
-
-        ajaxCall(123, 'string');
+        ajaxCall('value');
     });
 
 
-
-    // AJAX CALL FUNCTION - DESCRIPTION
-    function ajaxCall( number, string ) {
+    // AJAX CALL FUNCTION
+    function ajaxCall(data) {
         $.ajax({
-            url: ajaxurl, // var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+            url: LOCALIZE.ajaxurl,
             type: 'POST',
             data: {
-                    action: 'action_function',
-                    number: number,
-                    string: string,
+                    action: 'ajax_callback',
+                    data: data,
                     security: LOCALIZE.security
-                    // security: LOCALIZE.security_stat
             },
             success: function( response ) {
-              // console.log(response);
 
-                // wp_send_json_success
                 if ( response.success === true ) {
-
+                    // wp_send_json_success
                     handleResponseSuccess(response.data);
-
                 }
                 else {
                     // wp_send_json_error  -  This will work properly if WP_DEBUG is FALSE in WP-config.php
-                    message_box.append(response.data).addClass('show-message error');
+                    handleResponseFailure(response.data);
                 }
 
             }
-        }); // $.ajax
+        });
     }
 
 
+    // HANDLE AJAX SUCCESS
+    function handleResponseSuccess(response) {}
 
-
-    // HANDLE AJAX RESPONSE
-    function handleResponseSuccess( ajax_response ) {
-
-        // update neccessary elements
-        var elements = section.find('div');
-
-        for (var i = 0; i < elements.length; i++) {
-
-             // current element
-             var current_el = elements.eq(i);
-
-             // add new content
-             current_el.html('...');
-        }
-
-        // success message
-        // message_box.append(LOCALIZE.succ_added_txt).addClass('show-message success');
-        message_box.append('Message - success.').addClass('show-message success');
-    }
-
-
+    // HANDLE AJAX FAILURE
+    function handleResponseFailure(response) {}
 
 })(); // !JSAjax
