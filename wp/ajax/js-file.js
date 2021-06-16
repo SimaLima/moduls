@@ -17,12 +17,11 @@ var JSAjax = (function() {
             url: LOCALIZE.ajaxurl,
             type: 'POST',
             data: {
-                    action: 'ajax_callback',
-                    data: data,
-                    security: LOCALIZE.security
+                action: 'ajax_callback',
+                data: data,
+                security: LOCALIZE.security
             },
             success: function( response ) {
-
                 if ( response.success === true ) {
                     // wp_send_json_success
                     handleResponseSuccess(response.data);
@@ -31,7 +30,6 @@ var JSAjax = (function() {
                     // wp_send_json_error  -  This will work properly if WP_DEBUG is FALSE in WP-config.php
                     handleResponseFailure(response.data);
                 }
-
             }
         });
     }

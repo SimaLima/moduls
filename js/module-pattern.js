@@ -8,7 +8,7 @@ var Module = (function() {
     function display() {}
     function hide() {}
 
-    // make functions public (for accessing outside scope)
+    // make functions public
     return {
         display: display,
         hide: hide

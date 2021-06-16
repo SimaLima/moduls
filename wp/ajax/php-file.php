@@ -21,7 +21,7 @@ function ajax_callback() {
     }
 
 
-    // if not set or if empty -> throw error
+    // if value not set or if empty -> throw error
     if ( ! isset( $_POST['data'] ) || empty( trim( $_POST['data'] ) ) ) {
         wp_send_json_error( 'Value is missing.' );
     }

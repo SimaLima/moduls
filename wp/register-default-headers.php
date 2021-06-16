@@ -11,16 +11,16 @@ register_default_headers( array(
     'digital_art' => array(
         'url'            => get_template_directory_uri() . '/assets/images/headers/image-1.jpg',
         'thumbnail_url'  => get_template_directory_uri() . '/assets/images/headers/image-1-thumbnail.jpg',
-        'description'    => 'Description',
+        'description'    => 'Description 1',
     ),
     'night_and_mountain' => array(
         'url'            => get_template_directory_uri() . '/assets/images/headers/image-2.jpg',
         'thumbnail_url'  => get_template_directory_uri() . '/assets/images/headers/image-2-thumbnail.jpg',
-        'description'    => 'Description',
+        'description'    => 'Description 2',
     ),
     'programming' => array(
         'url'            => get_template_directory_uri() . '/assets/images/headers/image-3.jpg',
         'thumbnail_url'  => get_template_directory_uri() . '/assets/images/headers/image-3-thumbnail.jpg',
-        'description'    => 'Description',
+        'description'    => 'Description 3',
     ),
 ) );

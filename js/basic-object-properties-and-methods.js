@@ -21,7 +21,6 @@ person.nationality = 'Croatian';
 // delete property
 delete person.age;
 
-
 // accessing methods (objectName.methodName())
 person.fullName();
 

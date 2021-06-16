@@ -8,10 +8,14 @@
  */
 function getPageTemplateName() {
     global $post;
-    if ( ! isset( $post ) ) return false;
+    if ( ! isset( $post ) ) {
+        return;
+    }
 
     $page_template = get_post_meta( $post->ID, '_wp_page_template', true );
-    if ( empty( $page_template ) ) return false;
+    if ( empty( $page_template ) ) {
+        return;
+    }
 
     return $page_template;
 }

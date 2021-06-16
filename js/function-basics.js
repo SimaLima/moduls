@@ -5,7 +5,7 @@
 
 // function declaration
 function functionDeclaration() {
-    console.log('function declaration')
+    console.log('function declaration');
 }
 functionDeclaration();
 
@@ -13,7 +13,7 @@ functionDeclaration();
 // function expression
 var functionExpression = function() {
     console.log('function expression');
-}
+};
 functionExpression();
 
 

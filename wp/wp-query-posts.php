@@ -17,9 +17,11 @@ if ( $posts->have_posts() ) :
 
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-        <?php if ( has_post_thumbnail() && ! post_password_required() ) :
+        <?php
+        if ( has_post_thumbnail() && ! post_password_required() ) :
             the_post_thumbnail( 'thumbnail-size' );
-        endif; ?>
+        endif;
+        ?>
 
         <?php $category = get_the_category(); ?>
         <a href="<?php echo esc_url( get_category_link( $category[0]->term_id ) ); ?>"><?php esc_html_e( $category[0]->name ) ?></a>;

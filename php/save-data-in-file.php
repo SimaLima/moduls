@@ -20,5 +20,5 @@ function saveData($data) {
 
     $file = fopen($log_file, 'w');
     fwrite($file,  print_r($data, TRUE) . '\n');
-	fclose($file );
+	fclose($file);
 }
